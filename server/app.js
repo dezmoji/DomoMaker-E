@@ -63,7 +63,7 @@ app.use((err, req, res, next) => {
   if (err.code !== 'EBADCSRFTOKEN') return next(err);
 
   console.log('Missing CSRF token');
-  return false;
+  return null;
 });
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');

@@ -77,17 +77,7 @@ const updateDomo = (request, response) => {
 
   return Domo.DomoModel.findByID(req._id,(err,doc) =>{
 
-    domoPromise.then(() => res.json({ redirect: '/maker' }));
-
-    domoPromise.catch((err) => {
-      console.log(err);
-      if (err.code === 11000) {
-        return res.status(400).json({ error: 'Domo already exists' });
-      }
-
-      return res.status(400).json({ error: 'An error occured' });
-    });
-  });
+    
 
 };
 */
